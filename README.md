@@ -71,9 +71,9 @@ To get a local copy up and running, follow these steps.
 Clone the repository and change the directory to Recipe
 
 ```
-  $ git clone git@github.com:Felix45/hello-word.git
+  $ git clone https://github.com/dialite/hello-world-rails-react-v.git
 
-  $ cd hello-word
+  $ cd hello-world
 ```
 
 ### Install

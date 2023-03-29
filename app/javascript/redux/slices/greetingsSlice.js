@@ -1,3 +1,5 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
 // Update the fetchGreetingsThunk to extract the greeting attribute from the API response
 export const fetchGreetingsThunk = createAsyncThunk(
   "greetings/fetchGreetings",
@@ -35,3 +37,5 @@ const greetingsSlice = createSlice({
       });
   },
 });
+
+export default greetingsSlice.reducer;

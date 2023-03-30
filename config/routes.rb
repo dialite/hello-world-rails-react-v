@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       resources :greetings
     end
   end
+
+  get 'root/index'
 end
 
 

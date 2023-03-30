@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchGreetings } from '../redux/greetings/greetingSlice';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchGreetings } from "../redux/greetings/greetingSlice";
 
 const Greetings = () => {
   const dispatch = useDispatch();
@@ -10,16 +10,12 @@ const Greetings = () => {
     dispatch(fetchGreetings());
   }, [dispatch]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>{ error }</p>;
-  }
-
   return (
-    <p>{ greeting }</p>
+    <div>
+      {loading && <p>Processing...</p>}
+      {error && <p>{error}</p>}
+      {greeting && <p>{greeting}</p>}
+    </div>
   );
 };
 
